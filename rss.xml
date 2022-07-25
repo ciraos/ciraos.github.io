@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>葱苓小居</title>
+    <link>https://www.ciraos.top/</link>
+    
+    <image>
+      <url>https://www.ciraos.top/icon.png</url>
+      <title>葱苓小居</title>
+      <link>https://www.ciraos.top/</link>
+    </image>
+    
+    <atom:link href="https://www.ciraos.top/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>葱苓小居</description>
+    <pubDate>Sun, 24 Jul 2022 16:54:14 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>一直以来我想做的事情</title>
+      <link>https://www.ciraos.top/p/7059557b/</link>
+      <guid>https://www.ciraos.top/p/7059557b/</guid>
+      <pubDate>Sun, 24 Jul 2022 16:54:14 GMT</pubDate>
+      
+      <description>我想做的事情</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/%E9%9A%8F%E7%AC%94/">随笔</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/%E9%9A%8F%E7%AC%94/">随笔</category>
+      
+      
+      <comments>https://www.ciraos.top/p/7059557b/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>黑科技clientworker</title>
+      <link>https://www.ciraos.top/p/dbd36bcf/</link>
+      <guid>https://www.ciraos.top/p/dbd36bcf/</guid>
+      <pubDate>Sat, 23 Jul 2022 14:49:43 GMT</pubDate>
+      
+      <description>给你的博客装上黑科技clientworker</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/clientworker/">clientworker</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/clientworker/">clientworker</category>
+      
+      
+      <comments>https://www.ciraos.top/p/dbd36bcf/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>初柒科技 | “扬帆起航”LOGO设计活动</title>
+      <link>https://www.ciraos.top/p/11c8b926/</link>
+      <guid>https://www.ciraos.top/p/11c8b926/</guid>
+      <pubDate>Mon, 18 Jul 2022 04:24:00 GMT</pubDate>
+      
+      <description>初柒科技 | “扬帆起航”LOGO设计活动</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/%E5%88%9D%E6%9F%92%E7%A7%91%E6%8A%80/">初柒科技</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/%E5%88%9D%E6%9F%92%E7%A7%91%E6%8A%80/">初柒科技</category>
+      
+      
+      <comments>https://www.ciraos.top/p/11c8b926/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>nonebot2插件-进、退群通知插件</title>
+      <link>https://www.ciraos.top/p/fccffe1a/</link>
+      <guid>https://www.ciraos.top/p/fccffe1a/</guid>
+      <pubDate>Sun, 05 Jun 2022 05:11:10 GMT</pubDate>
+      
+      <description>nonebot2插件-进、退群通知插件</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/nonebot2/">nonebot2</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/nonebot2/">nonebot2</category>
+      
+      
+      <comments>https://www.ciraos.top/p/fccffe1a/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>C++基础之数组和指针和引用</title>
+      <link>https://www.ciraos.top/p/b545fdfc/</link>
+      <guid>https://www.ciraos.top/p/b545fdfc/</guid>
+      <pubDate>Thu, 26 May 2022 07:27:32 GMT</pubDate>
+      
+      <description>C++基础之数组和指针和引用</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/c/">c++</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="https://www.ciraos.top/tags/c/">c++</category>
+      
+      
+      <comments>https://www.ciraos.top/p/b545fdfc/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>尤里的复仇mod制作-第二周</title>
+      <link>https://www.ciraos.top/p/3bb0f30c/</link>
+      <guid>https://www.ciraos.top/p/3bb0f30c/</guid>
+      <pubDate>Wed, 25 May 2022 04:09:50 GMT</pubDate>
+      
+      <description>尤里的复仇mod制作-二周：动手</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/mod%E5%88%B6%E4%BD%9C/">mod制作</category>
+      
+      <category domain="https://www.ciraos.top/categories/mod%E5%88%B6%E4%BD%9C/YRmmod/">YRmmod</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/Yr/">Yr</category>
+      
+      
+      <comments>https://www.ciraos.top/p/3bb0f30c/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>尤里的复仇mod制作-第一周</title>
+      <link>https://www.ciraos.top/p/f751f025/</link>
+      <guid>https://www.ciraos.top/p/f751f025/</guid>
+      <pubDate>Mon, 16 May 2022 12:50:48 GMT</pubDate>
+      
+      <description>尤里的复仇mod制作-第一周：工具的准备</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/mod%E5%88%B6%E4%BD%9C/">mod制作</category>
+      
+      <category domain="https://www.ciraos.top/categories/mod%E5%88%B6%E4%BD%9C/YRmmod/">YRmmod</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/Yr/">Yr</category>
+      
+      
+      <comments>https://www.ciraos.top/p/f751f025/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>volantis的友链pyq搭建</title>
+      <link>https://www.ciraos.top/p/72b23c77/</link>
+      <guid>https://www.ciraos.top/p/72b23c77/</guid>
+      <pubDate>Mon, 28 Mar 2022 11:15:26 GMT</pubDate>
+      
+      <description>给你的博客配置友链pyq！！！</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/hexo/">hexo</category>
+      
+      <category domain="https://www.ciraos.top/categories/hexo/fcircle/">fcircle</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/hexo/">hexo</category>
+      
+      <category domain="https://www.ciraos.top/tags/fcircle/">fcircle</category>
+      
+      
+      <comments>https://www.ciraos.top/p/72b23c77/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>vscode配置C++运行环境</title>
+      <link>https://www.ciraos.top/p/1b95214d/</link>
+      <guid>https://www.ciraos.top/p/1b95214d/</guid>
+      <pubDate>Thu, 03 Feb 2022 13:57:18 GMT</pubDate>
+      
+      <description>vscode配置C++运行环境</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/vscode/">vscode</category>
+      
+      <category domain="https://www.ciraos.top/categories/vscode/cpp/">cpp</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/vscode/">vscode</category>
+      
+      <category domain="https://www.ciraos.top/tags/cpp/">cpp</category>
+      
+      
+      <comments>https://www.ciraos.top/p/1b95214d/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>2021年度总结</title>
+      <link>https://www.ciraos.top/p/27de5354/</link>
+      <guid>https://www.ciraos.top/p/27de5354/</guid>
+      <pubDate>Fri, 14 Jan 2022 03:31:00 GMT</pubDate>
+      
+      <description>一个fw的2021年度总结</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/Annual-Summary/">Annual-Summary</category>
+      
+      <category domain="https://www.ciraos.top/categories/Annual-Summary/2021/">2021</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/Annual-Summary/">Annual-Summary</category>
+      
+      <category domain="https://www.ciraos.top/tags/2021/">2021</category>
+      
+      
+      <comments>https://www.ciraos.top/p/27de5354/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>搭建kimo寄佬的ATRIbot</title>
+      <link>https://www.ciraos.top/p/904537c/</link>
+      <guid>https://www.ciraos.top/p/904537c/</guid>
+      <pubDate>Sat, 08 Jan 2022 15:29:56 GMT</pubDate>
+      
+      <description>搭建kimo寄佬的ATRIbot</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/ATRI-robot/">ATRI-robot</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/ATRI-robot/">ATRI-robot</category>
+      
+      
+      <comments>https://www.ciraos.top/p/904537c/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>hexo博客文件备份</title>
+      <link>https://www.ciraos.top/p/d7da06ea/</link>
+      <guid>https://www.ciraos.top/p/d7da06ea/</guid>
+      <pubDate>Thu, 06 Jan 2022 15:17:19 GMT</pubDate>
+      
+      <description>Hexo博客源码备份至Gitee，换电脑也不用愁！</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/hexo/">hexo</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/hexo/">hexo</category>
+      
+      
+      <comments>https://www.ciraos.top/p/d7da06ea/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>C++基础之结构体</title>
+      <link>https://www.ciraos.top/p/68128c80/</link>
+      <guid>https://www.ciraos.top/p/68128c80/</guid>
+      <pubDate>Sun, 26 Dec 2021 19:27:14 GMT</pubDate>
+      
+      <description>CPPのstruct学习</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/c/">c++</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="https://www.ciraos.top/tags/c/">c++</category>
+      
+      
+      <comments>https://www.ciraos.top/p/68128c80/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>提瓦特游记</title>
+      <link>https://www.ciraos.top/p/2312bb5c/</link>
+      <guid>https://www.ciraos.top/p/2312bb5c/</guid>
+      <pubDate>Thu, 02 Dec 2021 13:54:13 GMT</pubDate>
+      
+      <description>旅行者提瓦特冒险记</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/%E5%B0%8F%E8%AF%B4/">小说</category>
+      
+      <category domain="https://www.ciraos.top/categories/%E5%B0%8F%E8%AF%B4/%E6%8F%90%E7%93%A6%E7%89%B9%E5%8E%86%E9%99%A9%E8%AE%B0/">提瓦特历险记</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/%E5%B0%8F%E8%AF%B4/">小说</category>
+      
+      
+      <comments>https://www.ciraos.top/p/2312bb5c/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Learn-easyx</title>
+      <link>https://www.ciraos.top/p/61115249/</link>
+      <guid>https://www.ciraos.top/p/61115249/</guid>
+      <pubDate>Mon, 29 Nov 2021 04:10:21 GMT</pubDate>
+      
+      <description>EasyX Graphics Library 是针对 Visual C++ 的免费绘图库。</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/EasyX/">EasyX</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="https://www.ciraos.top/tags/EasyX/">EasyX</category>
+      
+      
+      <comments>https://www.ciraos.top/p/61115249/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>python正则表达式</title>
+      <link>https://www.ciraos.top/p/6bab798e/</link>
+      <guid>https://www.ciraos.top/p/6bab798e/</guid>
+      <pubDate>Thu, 28 Oct 2021 04:50:42 GMT</pubDate>
+      
+      <description>python正则表达式</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/python/">python</category>
+      
+      <category domain="https://www.ciraos.top/categories/python/re/">re</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/python/">python</category>
+      
+      <category domain="https://www.ciraos.top/tags/re/">re</category>
+      
+      
+      <comments>https://www.ciraos.top/p/6bab798e/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Html5语法总结</title>
+      <link>https://www.ciraos.top/p/39b3be91/</link>
+      <guid>https://www.ciraos.top/p/39b3be91/</guid>
+      <pubDate>Mon, 18 Oct 2021 07:12:09 GMT</pubDate>
+      
+      <description>html语法</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/html/">html</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="https://www.ciraos.top/tags/html/">html</category>
+      
+      
+      <comments>https://www.ciraos.top/p/39b3be91/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>桌面出现空白图标</title>
+      <link>https://www.ciraos.top/p/9056595a/</link>
+      <guid>https://www.ciraos.top/p/9056595a/</guid>
+      <pubDate>Thu, 09 Sep 2021 10:00:55 GMT</pubDate>
+      
+      <description>桌面出现空白图标</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7/">一天一个小技巧</category>
+      
+      <category domain="https://www.ciraos.top/categories/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7/WhiteIconOnDesktop/">WhiteIconOnDesktop</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7/">一天一个小技巧</category>
+      
+      <category domain="https://www.ciraos.top/tags/WhiteIconOnDesktop/">WhiteIconOnDesktop</category>
+      
+      
+      <comments>https://www.ciraos.top/p/9056595a/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>关于原版和尤里在win8/10/11运行的问题</title>
+      <link>https://www.ciraos.top/p/9da85550/</link>
+      <guid>https://www.ciraos.top/p/9da85550/</guid>
+      <pubDate>Sat, 10 Jul 2021 18:02:45 GMT</pubDate>
+      
+      <description>关于原版和尤里在win8/10运行的问题</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/game/">game</category>
+      
+      <category domain="https://www.ciraos.top/categories/game/ra2/">ra2</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/game/">game</category>
+      
+      <category domain="https://www.ciraos.top/tags/ra2/">ra2</category>
+      
+      
+      <comments>https://www.ciraos.top/p/9da85550/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>hexo博客搭建</title>
+      <link>https://www.ciraos.top/p/11759fea/</link>
+      <guid>https://www.ciraos.top/p/11759fea/</guid>
+      <pubDate>Sat, 10 Jul 2021 17:58:43 GMT</pubDate>
+      
+      <description>如何在你的电脑上搭建hexo博客</description>
+      
+      
+      
+      
+      <category domain="https://www.ciraos.top/categories/hexo/">hexo</category>
+      
+      
+      <category domain="https://www.ciraos.top/tags/hexo/">hexo</category>
+      
+      
+      <comments>https://www.ciraos.top/p/11759fea/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>

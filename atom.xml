@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>葱苓小居</title>
+  <icon>https://www.ciraos.top/icon.png</icon>
+  <subtitle>a small blog station</subtitle>
+  <link href="https://www.ciraos.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.ciraos.top/"/>
+  <updated>2022-07-24T16:54:14.000Z</updated>
+  <id>https://www.ciraos.top/</id>
+  
+  <author>
+    <name>Ciraos</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一直以来我想做的事情</title>
+    <link href="https://www.ciraos.top/p/7059557b/"/>
+    <id>https://www.ciraos.top/p/7059557b/</id>
+    <published>2022-07-24T16:54:14.000Z</published>
+    <updated>2022-07-24T16:54:14.000Z</updated>
+    
+    
+    <summary type="html">我想做的事情</summary>
+    
+    
+    
+    <category term="随笔" scheme="https://www.ciraos.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="https://www.ciraos.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>黑科技clientworker</title>
+    <link href="https://www.ciraos.top/p/dbd36bcf/"/>
+    <id>https://www.ciraos.top/p/dbd36bcf/</id>
+    <published>2022-07-23T14:49:43.000Z</published>
+    <updated>2022-07-23T14:49:43.000Z</updated>
+    
+    
+    <summary type="html">给你的博客装上黑科技clientworker</summary>
+    
+    
+    
+    <category term="clientworker" scheme="https://www.ciraos.top/categories/clientworker/"/>
+    
+    
+    <category term="clientworker" scheme="https://www.ciraos.top/tags/clientworker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初柒科技 | “扬帆起航”LOGO设计活动</title>
+    <link href="https://www.ciraos.top/p/11c8b926/"/>
+    <id>https://www.ciraos.top/p/11c8b926/</id>
+    <published>2022-07-18T04:24:00.000Z</published>
+    <updated>2022-07-18T06:01:57.000Z</updated>
+    
+    
+    <summary type="html">初柒科技 | “扬帆起航”LOGO设计活动</summary>
+    
+    
+    
+    <category term="初柒科技" scheme="https://www.ciraos.top/categories/%E5%88%9D%E6%9F%92%E7%A7%91%E6%8A%80/"/>
+    
+    
+    <category term="初柒科技" scheme="https://www.ciraos.top/tags/%E5%88%9D%E6%9F%92%E7%A7%91%E6%8A%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nonebot2插件-进、退群通知插件</title>
+    <link href="https://www.ciraos.top/p/fccffe1a/"/>
+    <id>https://www.ciraos.top/p/fccffe1a/</id>
+    <published>2022-06-05T05:11:10.000Z</published>
+    <updated>2022-06-05T05:11:10.000Z</updated>
+    
+    
+    <summary type="html">nonebot2插件-进、退群通知插件</summary>
+    
+    
+    
+    <category term="nonebot2" scheme="https://www.ciraos.top/categories/nonebot2/"/>
+    
+    
+    <category term="nonebot2" scheme="https://www.ciraos.top/tags/nonebot2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++基础之数组和指针和引用</title>
+    <link href="https://www.ciraos.top/p/b545fdfc/"/>
+    <id>https://www.ciraos.top/p/b545fdfc/</id>
+    <published>2022-05-26T07:27:32.000Z</published>
+    <updated>2022-05-26T07:27:32.000Z</updated>
+    
+    
+    <summary type="html">C++基础之数组和指针和引用</summary>
+    
+    
+    
+    <category term="学习" scheme="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="c++" scheme="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/c/"/>
+    
+    
+    <category term="学习" scheme="https://www.ciraos.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="c++" scheme="https://www.ciraos.top/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>尤里的复仇mod制作-第二周</title>
+    <link href="https://www.ciraos.top/p/3bb0f30c/"/>
+    <id>https://www.ciraos.top/p/3bb0f30c/</id>
+    <published>2022-05-25T04:09:50.000Z</published>
+    <updated>2022-05-25T04:09:50.000Z</updated>
+    
+    
+    <summary type="html">尤里的复仇mod制作-二周：动手</summary>
+    
+    
+    
+    <category term="mod制作" scheme="https://www.ciraos.top/categories/mod%E5%88%B6%E4%BD%9C/"/>
+    
+    <category term="YRmmod" scheme="https://www.ciraos.top/categories/mod%E5%88%B6%E4%BD%9C/YRmmod/"/>
+    
+    
+    <category term="Yr" scheme="https://www.ciraos.top/tags/Yr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>尤里的复仇mod制作-第一周</title>
+    <link href="https://www.ciraos.top/p/f751f025/"/>
+    <id>https://www.ciraos.top/p/f751f025/</id>
+    <published>2022-05-16T12:50:48.000Z</published>
+    <updated>2022-05-16T12:50:48.000Z</updated>
+    
+    
+    <summary type="html">尤里的复仇mod制作-第一周：工具的准备</summary>
+    
+    
+    
+    <category term="mod制作" scheme="https://www.ciraos.top/categories/mod%E5%88%B6%E4%BD%9C/"/>
+    
+    <category term="YRmmod" scheme="https://www.ciraos.top/categories/mod%E5%88%B6%E4%BD%9C/YRmmod/"/>
+    
+    
+    <category term="Yr" scheme="https://www.ciraos.top/tags/Yr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>volantis的友链pyq搭建</title>
+    <link href="https://www.ciraos.top/p/72b23c77/"/>
+    <id>https://www.ciraos.top/p/72b23c77/</id>
+    <published>2022-03-28T11:15:26.000Z</published>
+    <updated>2022-03-28T11:15:26.000Z</updated>
+    
+    
+    <summary type="html">给你的博客配置友链pyq！！！</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://www.ciraos.top/categories/hexo/"/>
+    
+    <category term="fcircle" scheme="https://www.ciraos.top/categories/hexo/fcircle/"/>
+    
+    
+    <category term="hexo" scheme="https://www.ciraos.top/tags/hexo/"/>
+    
+    <category term="fcircle" scheme="https://www.ciraos.top/tags/fcircle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode配置C++运行环境</title>
+    <link href="https://www.ciraos.top/p/1b95214d/"/>
+    <id>https://www.ciraos.top/p/1b95214d/</id>
+    <published>2022-02-03T13:57:18.000Z</published>
+    <updated>2022-02-03T13:57:18.000Z</updated>
+    
+    
+    <summary type="html">vscode配置C++运行环境</summary>
+    
+    
+    
+    <category term="vscode" scheme="https://www.ciraos.top/categories/vscode/"/>
+    
+    <category term="cpp" scheme="https://www.ciraos.top/categories/vscode/cpp/"/>
+    
+    
+    <category term="vscode" scheme="https://www.ciraos.top/tags/vscode/"/>
+    
+    <category term="cpp" scheme="https://www.ciraos.top/tags/cpp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021年度总结</title>
+    <link href="https://www.ciraos.top/p/27de5354/"/>
+    <id>https://www.ciraos.top/p/27de5354/</id>
+    <published>2022-01-14T03:31:00.000Z</published>
+    <updated>2022-01-14T03:31:00.000Z</updated>
+    
+    
+    <summary type="html">一个fw的2021年度总结</summary>
+    
+    
+    
+    <category term="Annual-Summary" scheme="https://www.ciraos.top/categories/Annual-Summary/"/>
+    
+    <category term="2021" scheme="https://www.ciraos.top/categories/Annual-Summary/2021/"/>
+    
+    
+    <category term="Annual-Summary" scheme="https://www.ciraos.top/tags/Annual-Summary/"/>
+    
+    <category term="2021" scheme="https://www.ciraos.top/tags/2021/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建kimo寄佬的ATRIbot</title>
+    <link href="https://www.ciraos.top/p/904537c/"/>
+    <id>https://www.ciraos.top/p/904537c/</id>
+    <published>2022-01-08T15:29:56.000Z</published>
+    <updated>2022-06-22T14:34:00.000Z</updated>
+    
+    
+    <summary type="html">搭建kimo寄佬的ATRIbot</summary>
+    
+    
+    
+    <category term="ATRI-robot" scheme="https://www.ciraos.top/categories/ATRI-robot/"/>
+    
+    
+    <category term="ATRI-robot" scheme="https://www.ciraos.top/tags/ATRI-robot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博客文件备份</title>
+    <link href="https://www.ciraos.top/p/d7da06ea/"/>
+    <id>https://www.ciraos.top/p/d7da06ea/</id>
+    <published>2022-01-06T15:17:19.000Z</published>
+    <updated>2022-01-06T15:17:19.000Z</updated>
+    
+    
+    <summary type="html">Hexo博客源码备份至Gitee，换电脑也不用愁！</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://www.ciraos.top/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://www.ciraos.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++基础之结构体</title>
+    <link href="https://www.ciraos.top/p/68128c80/"/>
+    <id>https://www.ciraos.top/p/68128c80/</id>
+    <published>2021-12-26T19:27:14.000Z</published>
+    <updated>2021-12-31T16:38:00.000Z</updated>
+    
+    
+    <summary type="html">CPPのstruct学习</summary>
+    
+    
+    
+    <category term="学习" scheme="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="c++" scheme="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/c/"/>
+    
+    
+    <category term="学习" scheme="https://www.ciraos.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="c++" scheme="https://www.ciraos.top/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提瓦特游记</title>
+    <link href="https://www.ciraos.top/p/2312bb5c/"/>
+    <id>https://www.ciraos.top/p/2312bb5c/</id>
+    <published>2021-12-02T13:54:13.000Z</published>
+    <updated>2022-07-05T11:59:57.000Z</updated>
+    
+    
+    <summary type="html">旅行者提瓦特冒险记</summary>
+    
+    
+    
+    <category term="小说" scheme="https://www.ciraos.top/categories/%E5%B0%8F%E8%AF%B4/"/>
+    
+    <category term="提瓦特历险记" scheme="https://www.ciraos.top/categories/%E5%B0%8F%E8%AF%B4/%E6%8F%90%E7%93%A6%E7%89%B9%E5%8E%86%E9%99%A9%E8%AE%B0/"/>
+    
+    
+    <category term="小说" scheme="https://www.ciraos.top/tags/%E5%B0%8F%E8%AF%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Learn-easyx</title>
+    <link href="https://www.ciraos.top/p/61115249/"/>
+    <id>https://www.ciraos.top/p/61115249/</id>
+    <published>2021-11-29T04:10:21.000Z</published>
+    <updated>2021-11-29T04:10:21.000Z</updated>
+    
+    
+    <summary type="html">EasyX Graphics Library 是针对 Visual C++ 的免费绘图库。</summary>
+    
+    
+    
+    <category term="学习" scheme="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="EasyX" scheme="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/EasyX/"/>
+    
+    
+    <category term="学习" scheme="https://www.ciraos.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="EasyX" scheme="https://www.ciraos.top/tags/EasyX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python正则表达式</title>
+    <link href="https://www.ciraos.top/p/6bab798e/"/>
+    <id>https://www.ciraos.top/p/6bab798e/</id>
+    <published>2021-10-28T04:50:42.000Z</published>
+    <updated>2021-10-28T04:50:42.000Z</updated>
+    
+    
+    <summary type="html">python正则表达式</summary>
+    
+    
+    
+    <category term="python" scheme="https://www.ciraos.top/categories/python/"/>
+    
+    <category term="re" scheme="https://www.ciraos.top/categories/python/re/"/>
+    
+    
+    <category term="python" scheme="https://www.ciraos.top/tags/python/"/>
+    
+    <category term="re" scheme="https://www.ciraos.top/tags/re/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Html5语法总结</title>
+    <link href="https://www.ciraos.top/p/39b3be91/"/>
+    <id>https://www.ciraos.top/p/39b3be91/</id>
+    <published>2021-10-18T07:12:09.000Z</published>
+    <updated>2021-10-18T07:12:09.000Z</updated>
+    
+    
+    <summary type="html">html语法</summary>
+    
+    
+    
+    <category term="学习" scheme="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="html" scheme="https://www.ciraos.top/categories/%E5%AD%A6%E4%B9%A0/html/"/>
+    
+    
+    <category term="学习" scheme="https://www.ciraos.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="html" scheme="https://www.ciraos.top/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>桌面出现空白图标</title>
+    <link href="https://www.ciraos.top/p/9056595a/"/>
+    <id>https://www.ciraos.top/p/9056595a/</id>
+    <published>2021-09-09T10:00:55.000Z</published>
+    <updated>2021-09-09T10:00:55.000Z</updated>
+    
+    
+    <summary type="html">桌面出现空白图标</summary>
+    
+    
+    
+    <category term="一天一个小技巧" scheme="https://www.ciraos.top/categories/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="WhiteIconOnDesktop" scheme="https://www.ciraos.top/categories/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7/WhiteIconOnDesktop/"/>
+    
+    
+    <category term="一天一个小技巧" scheme="https://www.ciraos.top/tags/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="WhiteIconOnDesktop" scheme="https://www.ciraos.top/tags/WhiteIconOnDesktop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于原版和尤里在win8/10/11运行的问题</title>
+    <link href="https://www.ciraos.top/p/9da85550/"/>
+    <id>https://www.ciraos.top/p/9da85550/</id>
+    <published>2021-07-10T18:02:45.000Z</published>
+    <updated>2021-07-10T18:02:45.000Z</updated>
+    
+    
+    <summary type="html">关于原版和尤里在win8/10运行的问题</summary>
+    
+    
+    
+    <category term="game" scheme="https://www.ciraos.top/categories/game/"/>
+    
+    <category term="ra2" scheme="https://www.ciraos.top/categories/game/ra2/"/>
+    
+    
+    <category term="game" scheme="https://www.ciraos.top/tags/game/"/>
+    
+    <category term="ra2" scheme="https://www.ciraos.top/tags/ra2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博客搭建</title>
+    <link href="https://www.ciraos.top/p/11759fea/"/>
+    <id>https://www.ciraos.top/p/11759fea/</id>
+    <published>2021-07-10T17:58:43.000Z</published>
+    <updated>2021-07-10T17:58:43.000Z</updated>
+    
+    
+    <summary type="html">如何在你的电脑上搭建hexo博客</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://www.ciraos.top/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://www.ciraos.top/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>

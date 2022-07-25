@@ -1,0 +1,155 @@
+
+#!
+name: CiraosDynamicWorker
+
+#! 热更新
+hotpatch:
+  #- https://cdn.jsdelivr.net/gh/ChenYFan/ClientWorker/cw.js
+  - https://raw.githubusercontent.com/ChenYFan/ClientWorker/gh-pages/cw.js
+
+hotconfig:
+  #- https://cdn.jsdelivr.net/gh/ChenYFan/ClientWorker/config.yaml
+  - https://raw.githubusercontent.com/ChenYFan/ClientWorker/gh-pages/config.yaml
+
+#! 自动清除过期缓存时间间隔
+cleaninterval: 1000*5*60
+
+#!
+catch_rules:
+
+  #! ClientWorker语法糖，匹配当前域，返回一个域名带端口
+  # - rule: _
+  #   transform_rules:
+  #     - search: \#.+
+  #       searchin: url
+  #       replace: ''
+  #     - search: _ 
+  #       action: fetch
+  #       fetch:
+  #         engine: fetch 
+  #     - search: (^4|^5) 
+  #       searchin: status 
+  #       action: return
+  #       return:
+  #         body: The GateWay is down!This Page is provided by ClientWorker!
+  #         status: 503
+
+  #! ClientWorker语法糖，匹配当前域，返回一个域名带端口
+  - rule: _
+    transform_rules:
+      - search: \#.+
+        searchin: url
+        replace: ''
+      - search: _
+        replace: ciraos-octo.vercel.app #? www.ciraos.top # ciraos.github.io # ciraos.gitee.io
+        action: fetch
+        fetch:
+          engine: fetch 
+          redirect: manual
+          cache:
+            expire: 6*60*60*1000 #? 过期时间
+      - search: (^4|^5) 
+        searchin: status 
+        action: return
+        return:
+          body: The GateWay is down!This Page is provided by ClientWorker!
+          status: 503
+
+  #! ClientWorker语法糖，匹配当前域，返回一个域名带端口
+  # - rule: _
+  #   transform_rules:
+  #     - search: (\.js|\.css)$
+  #       action: fetch
+  #     - search: \#.+
+  #       searchin: url
+  #       replace: ''
+  #     - search: _
+  #       action: fetch
+  #       fetch:
+  #         engine: fetch
+  #     - search: (^4|^5)
+  #       searchin: status
+  #       action: return
+  #       return:
+  #         body: The GateWay id down! This Page is provided by ClientWorker!
+  #         status: 503
+
+  #! 并发CDN流量请求 - npm
+  # - rule: ^https\:\/\/((cdn|fastly|gcore|test1|quantil)\.jsdelivr\.net\/npm|unpkg\.com)
+  #   transform_rules:
+  #     - search: _
+  #       replace:
+  #         - _
+  #         - https://unpkg.zhimg.com       #? 回源已关闭，原缓存有效
+  #         - https://npm.elemecdn.com      #? 2022/7/12 确认关闭回源，缓存有效
+  #         - https://code.bdstatic.com/npm #? 确认关闭回源，缓存有效
+  #         #- https://npm.sourcegcdn.com   #? 滥用封仓库，强制数字版本号
+  #         #- https://cdn.bilicdn.tk/npm   #? 由GamerNoTitle提供的反代，请勿滥用:D
+
+  #! 并发CDN流量请求 - cdnjs
+  # - rule: ^https\:\/\/cdnjs\.cloudflare\.com\/ajax\/libs
+  #   transform_rules:
+  #     - search: _
+  #       replace:
+  #         - _
+  #         - https://cdn.bootcdn.net/ajax/libs
+  #         - https://lib.baomitu.com
+  #         - https://mirrors.cqupt.edu.cn/cdnjs/ajax/libs    #? 重庆邮电
+  #         - https://cdn.staticfile.org
+  #         - https://mirrors.sustech.edu.cn/cdnjs/ajax/libs  #? 南大
+  #         - https://cdnjs.sourcegcdn.com/ajax/libs          #? 全同步 https://cdnjs.cloudflare.com
+
+  #! webp兼容计划 - jpg
+  # - rule: (?<=^https\:\/\/s2.loli/(.*))\.jpg$
+  #   transform_rules:
+  #     - search: image\/webp
+  #       searchin: header
+  #       searchkey: Accept
+  #       replace: .webp
+  #       replacein: url
+  #       replacekey: .jpg
+
+  #! webp兼容计划 - png
+  # - rule: (?<=^https\:\/\/s2.loli/(.*))\.png$
+  #   transform_rules:
+  #     - search: image\/webp
+  #       searchin: header
+  #       searchkey: Accept
+  #       replace: .webp
+  #       replacein: url
+  #       replacekey: .jpg
+
+  #! webp兼容计划 - gif
+  # - rule: (?<=^https\:\/\/s2.loli/(.*))\.gif$
+  #   transform_rules:
+  #     - search: image\/webp
+  #       searchin: header
+  #       searchkey: Accept
+  #       replace: .webp
+  #       replacein: url
+  #       replacekey: .jpg
+
+  #! 自动更新配置及clientworker - 通过autoupdate.js实现。
+
+  #! 纯静态网站加速
+  # - rule: _             #? ClientWorker语法糖，匹配当前域，返回一个域名带端口
+  #     transform_rules:
+  #       - search: \#.*
+  #         replace: ''
+  #       - search: \?.*
+  #         replace: '' 
+  #       - search: _ 
+  #         replace: 
+  #           - _
+  #           - ciraos.github.io
+  #           - ciraos.gitee.io
+  #       - search: \.html$
+  #         header:
+  #           Content-Type: text/html;charset=UTF-8 #? 修复标头
+  #       - search: _
+  #         action: fetch
+  #         fetch:
+  #           status: 200
+  #           engine: classic
+  #           preflight: false
+  #           timeout: 5000
