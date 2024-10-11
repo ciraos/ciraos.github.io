@@ -1,0 +1,699 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;default&quot;]" data-theme="light"><head><!-- hexo injector head_begin start --><script>(() => {
+                    const sw = navigator.serviceWorker;
+                    if (sw) {
+                        sw.register('sw.js')
+                            .then(async (registration) => {
+                            console.log('SWPP 注册成功');
+                            try {
+                                // @ts-ignore
+                                await registration.periodicSync.register("update", {
+                                    minInterval: 24 * 60 * 60 * 1000
+                                });
+                            }
+                            catch (e) {
+                                console.warn('Periodic Sync 注册失败', e);
+                            }
+                        })
+                            .catch(err => console.error('SWPP 注册失败', err));
+                    }
+                    else {
+                        console.warn('当前浏览器不支持 SW');
+                    }
+                })()</script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>CPrimerPlus-第三章-数据和C[持续更新中] | 葱苓sama</title><meta name="keywords" content="CPrimerPlus-第三章-数据和C"><meta name="author" content="葱苓Ciraos"><meta name="copyright" content="葱苓Ciraos"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="CPrimerPlus-第三章-数据和C[持续更新中]"><meta name="application-name" content="CPrimerPlus-第三章-数据和C[持续更新中]"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="CPrimerPlus-第三章-数据和C[持续更新中]"><meta property="og:url" content="https://blog.ciraos.top/p/ac068839/index.html"><meta property="og:site_name" content="葱苓sama"><meta property="og:description" content="CPrimerPlus-第三章-数据和C"><meta property="og:locale" content="[&quot;zh-CN&quot;,&quot;default&quot;]"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/genshin12.avif"><meta property="article:author" content="葱苓Ciraos"><meta property="article:tag" content="hexo,anzhiyu,c,c++,coding,blog"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/genshin12.avif"><meta name="description" content="CPrimerPlus-第三章-数据和C"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/avatar1.avif"><link rel="canonical" href="https://blog.ciraos.top/p/ac068839/"><link rel="preconnect" href="//cdn.cbd.int"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="google-site-verification" content="xxx"><meta name="baidu-site-verification" content="codeva-S1pbyyKdiu"><meta name="msvalidate.01" content="xxx"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?552ef4b39397c4fde4e07f4249f067a0";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"tianli","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"bfcd6fd58529d7445133","Referer":"https://blog.ciraos.top/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"你好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈"}]},
+  twikooEnvId: 'https://twikoo.ciraos.top/',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://friends.ciraos.top/"},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🔍 分享与热心帮助","🏃 脚踏实地行动派"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":30,"position":"top","messagePrev":"距离上次更新已经过去了","messageNext":"天，文章这部分内容可能已经过期。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 葱苓Ciraos","link":"链接: ","source":"来源: 葱苓sama","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '葱苓sama',
+  title: 'CPrimerPlus-第三章-数据和C[持续更新中]',
+  postAI: 'true',
+  pageFillDescription: '示例程序, 程序中的新元素, 变量与常量数据, 数据：数据类型关键字, 整数和浮点数, 整数, 浮点数, C语言基本数据类型, int 类型程序离不开数据把数字字母和文字输入计算机就是希望它利用这些数据完成某些任务例如需要计算一份利息或显示一份葡萄酒商的排序列表本章除了介绍如何读取数据外还将教会读者如何操控数据语言提供两大系列的多种数据类型本章详细介绍两大数据类型整数类型和浮点数类型讲解这些数据类型是什么如何声明它们如何以及何时使用它们除此之外还将介绍常量和变量的区别读者很快就能看到第个交互式程序示例程序你的体重相等重量的白金价值获取用户的输入假设白金的价格是每盎司用于把英镑常衡盎司转换为金衡盎司提示错误与警告如果输入程序时打错如漏了一个分号编译器会报告语法错误消息然而即使输入正确无误编译器也可能给出一些警告如警告从类型转换成类型可能会丢失数据错误消息表明程序中有错不能进行编译而警告则表明尽管编写的代码有效但可能不是程序员想要的警告并不终止编译特殊的警告与如何处理这样的值有关本例不必理会这个问题本章稍后会进一步说明输入该程序时可以把改成贵金属白金当前的市价但是不要改动该数是英镑的金衡盎司数金衡盎司用于衡量贵金属而英镑常衡盎司用于衡量人的体重注意的意思是输入你的体重然后按下或键不要键入体重后就一直等着按下键是告知计算机你已完成输入数据该程序需要你输入一个数字如而不是单词如如果输入字母而不是数字会导致程序出问题这个问题要用语句来解决详见第章因此请先输入数字下面是程序的输出示例程序调整即使用第章介绍的方法在程序中添加下面一行代码程序的输出是否依旧在屏幕上一闪而过本例需要调用两次函数函数读取下一个输入字符因此程序会等待用户输入在这种情况下键入并按下或键发送一个换行符然后读取键入的数字第个读取换行符第个让程序暂停等待输入程序中的新元素程序清单中包含语言的一些新元素注意代码中使用了一种新的变量声明前面的例子中只使用了整数类型的变量但是本例使用了浮点数类型的变量以便处理更大范围的数据类型可以储存带小数的数字程序中演示了常量的几种新写法现在可以使用带小数点的数了为了打印新类型的变量在中使用来处理浮点值号中的用于精确控制输出指定输出的浮点数只显示小数点后面两位函数用于读取键盘的输入说明要读取用户从键盘输入的浮点数告诉把输入的值赋给名为的变量函数使用符号表明找到变量的地点下一章将详细讨论就目前而言请按照这样写也许本程序最突出的新特点是它的交互性计算机向用户询问信息然后用户输入数字与非交互式程序相比交互式程序用起来更有趣更重要的是交互式使得程序更加灵活例如示例程序可以使用任何合理的体重而不只是磅不必重写程序就可以根据不同体重进行计算和函数用于实现这种交互函数读取用户从键盘输入的数据并把数据传递给程序函数读取程序中的数据并把数据显示在屏幕上把两个函数结合起来就可以建立人机双向通信见图这让使用计算机更加饶有趣味本章着重解释上述新特性中的前两项各种数据类型的变量和常量第章将介绍后项变量与常量数据在程序的指导下计算机可以做许多事情如数值计算名字排序执行语言或视频命令计算彗星轨道准备邮件列表拨电话号码画画做决策或其他你能想到的事情要完成这些任务程序需要使用数据即承载信息的数字和字符有些数据类型在程序使用之前已经预先设定好了在整个程序的运行过程中没有变化这些称为常量其他数据类型在程序运行期间可能会改变或被赋值这些称为变量在示例程序中是一个变量是一个常量那么是常量还是变量在现实生活中白金的价格不会是常量但是在程序中像这样的价格被视为常量数据数据类型关键字不仅变量和常量不同不同的数据类型之间也有差异一些数据类型表示数字些数据类型表示字母更普遍地说是字符通过识别一些基本的数据类型来区分和使用这些不同的数据类型如果数据是常量编译器一般通过用户书写的形式来识别类型如是整数是浮点数但是对变量而言要在声明时指定其类型稍后会详细介绍如何声明变量现在我们先来了解一下语言的基本类型关键字给出了个与类型相关的关键字标准添加了个关键字标准又添加了个关键字见表表语言的数据类型关键字最初给出的关键字标准添加的关键字标准添加的关键字在语言中用关键字来表示基本的整数类型后个关键字和和新增的用于提供基本整数类型的变式例如和关键字用于指定字母和其他字符如和另外类型也可以表示较小的整数和表示带小数点的数类型表示布尔值或和分别表示复数和虚数通过这些关键字创建的类型按计算机的储存方式可分为两大基本类型整数类型和浮点数类型位字节和字位字节和字是描述计算机数据单元或存储单元的术语这里主要指存储单元最小的存储单元是位可以储存或或者说位用于设置开或关虽然位储存的信息有限但是计算机中位的数量十分庞大位是计算机内存的基本构建块字节是常用的计算机存储单位对于几乎所有的机器字节均为位这是字节的标准定义至少在衡量存储单位时是这样但是语言对此有不同的定义请参阅本章节既然位可以表示或那么位字节就有的次方种可能的的组合通过二进制编码仅用和便可表示数字便可表示的整数或一组字符第章将详细讨论二进制编码如果感兴趣可以现在浏览一下该章的内容字是设计计算机时给定的自然存储单位对于位的微型计算机如最初的苹果机个字长只有位从那以后个人计算机字长增至位位直到目前的位计算机的字长越大其数据转移越快允许的内存访问也更多整数和浮点数整数类型浮点数类型如果觉得这些术语非常陌生别担心下面先简述它们的含义如果不熟悉位字节和字的概念请阅读上面方框中的内容刚开始学习时不必了解所有的细节就像学习开车之前不必详细了解汽车内部引擎的原理一样但是了解一些计算机或汽车引擎内部的原理会对你有所帮助对我们而言整数和浮点数的区别是它们的书写方式不同对计算机而言它们的区别是储存方式不同下面详细介绍整数和浮点数整数和数学的概念一样在语言中整数是没有小数部分的数例如和都是整数而和都不是整数计算机以二进制数字储存整数例如整数以二进制写是因此要在位字节中储存该数字需要把前位都设置成后位设置成如图所示浮点数浮点数与数学中实数的概念差不多和都是浮点数注意在一个值后面加上一个小数点该值就成为一个浮点值所以是整数是浮点数显然书写浮点数有多种形式稍后将详细介绍记数法这里先做简要介绍表示乘以的次方其中被称为的指数这里关键要理解浮点数和整数的储存方案不同计算机把浮点数分成小数部分和指数部分来表示而且分开储存这两部分因此虽然和在数值上相同但是它们的储存方式不同在十进制下可以把写成这里是小数部分是指数部分图演示了一个储存浮点数的例子当然计算机在内部使用二进制和的幂进行储存而不是的幂第章将详述相关内容现在我们着重讲解这两种类型的实际区别整数没有小数部分浮点数有小数部分浮点数可以表示的范围比整数大参见本章末的表对于一些算术运算如两个很大的数相减浮点数损失的精度更多因为在任何区间内如到之间都存在无穷多个实数所以计算机的浮点数不能表示区间内所有的值浮点数通常只是实际值的近似值例如可能被储存为浮点值稍后会讨论更多精度方面的内容过去浮点运算比整数运算慢不过现在许多都包含浮点处理器缩小了速度上的差距语言基本数据类型本节将详细节介绍语言的基本数据类型包括如何声明变量如何表示字面值常量如或以及典型的用法一些老式的语言编译器无法支持这里提到的所有类型请查阅你使用的编译器文档了解可以使用哪些类型类型语言提供了许多整数类型为什么一种类型不够用因为语言让程序员针对不同情况选择不同的类型特别是语言中的整数类型可表示不同的取值范围和正负值一般情况使用类型即可但是为满足特定任务和机器的要求还可以选择其他类型类型是有符号整型即类型的值必须是整数可以是正整数负整数或零其取值范围依计算机系统而异一般而言储存一个要占用一个机器字长因此早期的位兼容机使用位来储存一个值其取值范围即值的取值范围是目前的个人计算机一般是位因此用位储存一个值现在个人计算机产业正逐步向着位处理器发展自然能储存更大的整数规定的取值范围最小为一般而言系统用一个特殊位的值表示有符号整数的正负号第章将介绍常用的方法声明变量第章中已经用声明过基本整型变量先写上然后写变量名最后加上一个分号要声明多个变量可以单独声明每个变量也可在后面列出多个变量名变量名之间用逗号分隔下面都是有效的声明可以分别在条声明中声明各变量也可以在一条声明中声明个变量两种方法的效果相同都为个大小的变量赋予名称并分配内存空间以上声明创建了变量但是并没有给它们提供值变量如何获得值前面介绍过在程序中获取值的两种途径第种途径是赋值初始化变量初始化变量就是为变量赋一个初始值在语言中初始化可以直接在声明中完成只需在变量名后面加上赋值运算符和待赋给变量的值即可如下所示有效但是这种格式很糟糕以上示例的最后一行只初始化了并未初始化这种写法很容易让人误认为也被初始化为所以最好不要把初始化的变量和未初始化的变量放在同一条声明中简而言之声明为变量创建和标记存储空间并为其指定初始值如图所示类型常量上面示例中出现的整数和都是整型常量或整型字面量语言把不含小数点和指数的数作为整数因此和都是整型常量但是和则不是语言把大多数整型常量视为类型但是非常大的整数除外详见后面常量和常量小节对类型的讨论打印值',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-09 13:20:42',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><script type="text/javascript" src="https://unpkg.zhimg.com/jquery@3.7.1/dist/jquery.min.js"></script><link rel="stylesheet" href="/custom/custom.css?1" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><script defer="" src="/sw-dom.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="葱苓sama" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="葱苓sama" type="application/rss+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/avatar1.avif"><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">页面</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ciraos.top/" title="主页"><img class="back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/svg/carrot.svg" alt="主页"><span class="back-menu-item-text">主页</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"><span class="back-menu-item-text">安知鱼图床</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://pan.ciraos.top/" title="葱苓の网盘"><img class="back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/svg/webdisk.svg" alt="葱苓の网盘"><span class="back-menu-item-text">葱苓の网盘</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">葱苓sama</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/friends/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=969365979&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/cinemas/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 追剧页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 协议</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/copyright/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-banquan"></use></svg><span> 版权协议</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/privacy/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yinsixieyi"></use></svg><span> 隐私协议</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/cookies/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-huancun"></use></svg><span> Cookies</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/operation-model-and-responability/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yunyingguanli"></use></svg><span> 运营模式与责任</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/payment/wechat.avif" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/payment/wechat.avif"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/payment/alipay.avif" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/payment/alipay.avif"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CPrimerPlus/" style="font-size: 1.05rem;">CPrimerPlus<sup>1</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.05rem;">C语言<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/clientworker/" style="font-size: 1.05rem;">clientworker<sup>1</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>3</sup></a><a href="/tags/nextjs/" style="font-size: 1.05rem;">nextjs<sup>1</sup></a><a href="/tags/swpp/" style="font-size: 1.05rem;">swpp<sup>1</sup></a><a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.05rem;">随笔<sup>1</sup></a></div></div><hr></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li></ul></div><hr></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/CPrimerPlus/" itemprop="url">CPrimerPlus</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/CPrimerPlus/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>CPrimerPlus</span></a></span></div></div><h1 class="post-title" itemprop="name headline">CPrimerPlus-第三章-数据和C[持续更新中]<a class="post-edit-link" href="undefined_posts/CPrimerPlus-Chapter03.md" title="在 GitHub 上编辑 - CPrimerPlus-第三章-数据和C[持续更新中]" target="_blank"><i class="anzhiyufont anzhiyu-icon-pencil"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-06-09T05:20:42.000Z" title="发表于 2024-06-09 13:20:42">2024-06-09</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-06-09T05:20:42.000Z" title="更新于 2024-06-09 13:20:42">2024-06-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">4.2k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>13分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="CPrimerPlus-第三章-数据和C[持续更新中]"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为淮南"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>淮南</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/p/ac068839/#post-comment" tabindex="-1"><span id="twikoo-count"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/genshin12.avif"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div class="post-ai-description"><div class="ai-title"><i class="anzhiyufont anzhiyu-icon-bilibili"></i><div class="ai-title-text">AI-摘要</div><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i><i class="anzhiyufont anzhiyu-icon-circle-dot" title="朗读摘要"></i><div id="ai-tag">Tianli GPT</div></div><div class="ai-explanation">AI初始化中...</div><div class="ai-btn-box"><div class="ai-btn-item">介绍自己 🙈</div><div class="ai-btn-item">生成本文简介 👋</div><div class="ai-btn-item">推荐相关文章 📖</div><div class="ai-btn-item">前往主页 🏠</div><div class="ai-btn-item" id="go-tianli-blog">前往爱发电购买</div></div><script data-pjax="" src="/js/anzhiyu/ai_abstract.js"></script></div><article class="post-content" id="article-container" itemscope="" itemtype="https://blog.ciraos.top/p/ac068839/"><header><a class="post-meta-categories" href="/categories/CPrimerPlus/" itemprop="url">CPrimerPlus</a><a href="/tags/CPrimerPlus/" tabindex="-1" itemprop="url">CPrimerPlus</a><h1 id="CrawlerTitle" itemprop="name headline">CPrimerPlus-第三章-数据和C[持续更新中]</h1><span itemprop="author" itemscope="" itemtype="http://schema.org/Person">葱苓Ciraos</span><time itemprop="dateCreated datePublished" datetime="2024-06-09T05:20:42.000Z" title="发表于 2024-06-09 13:20:42">2024-06-09</time><time itemprop="dateCreated datePublished" datetime="2024-06-09T05:20:42.000Z" title="更新于 2024-06-09 13:20:42">2024-06-09</time></header><div id="postchat_postcontent"><p>&nbsp;&nbsp;&nbsp;&nbsp;程序离不开数据。把数字、字母和文字输入计算机，就是希望它利用这些数据完成某些任务。例如，需要计算一份利息或显示一份葡萄酒商的排序列表。本章除了介绍如何读取数据外，还将教会读者如何操控数据。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;C语言提供两大系列的多种数据类型。本章详细介绍两大数据类型:整数类型和浮点数类型，讲解这些数据类型是什么、如何声明它们、如何以及何时使用它们。除此之外，还将介绍常量和变量的区别。读者很快就能看到第1个交互式程序。</p>
+<h2 id="示例程序"><a href="#示例程序" class="headerlink" title="示例程序"></a>示例程序</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*platinum.c --  your weight in platinum */</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">float</span> weight;   <span class="comment">/*你的体重*/</span></span><br><span class="line">    <span class="type">float</span> value;    <span class="comment">/*相等重量的白金价值*/</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Are you worth your weight in platinum?\n"</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Let's check it out.\n"</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Please enter your weight in pounds:"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*获取用户的输入*/</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>，&amp;weight);</span><br><span class="line">    <span class="comment">/*假设白金的价格是每盎司$1700*/</span></span><br><span class="line">    <span class="comment">/*14.5833用于把英镑常衡盎司转换为金衡盎司*/</span></span><br><span class="line">    value = <span class="number">1700.0</span> * weight * <span class="number">14.5833</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Your weight in platinum is worth $%.2f.\n"</span>, value);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"You are easily worth that! If platinum prices drop,\n"</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"eat more to maintain your value.\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<div class="note default modern"><p>提示 错误与警告<br>&nbsp;&nbsp;&nbsp;&nbsp;如果输入程序时打错(如，漏了一个分号)，编译器会报告语法错误消息。然而，即使输入正确无误，编译器也可能给出一些警告，如<code>警告:从 double 类型转换成 float 类型可能会丢失数据</code>。错误消息表明程序中有错，不能进行编译。而警告则表明，尽管编写的代码有效，但可能不是程序员想要的。警告并不终止编译。特殊的警告与℃如何处理1700.0这样的值有关。本例不必理会这个问题，本章稍后会进一步说明。</p>
+</div>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;输入该程序时，可以把1700.0改成贵金属白金当前的市价，但是不要改动14.5833，该数是1英镑的金衡盎司数(金衡盎司用于衡量贵金属，而英镑常衡盎司用于衡量人的体重)。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;注意，“enter your weight”的意思是输入你的体重，然后按下Enter或Return键(不要键入体重后就一直等着)。按下 Enter 键是告知计算机,你已完成输入数据。该程序需要你输入一个数字(如,155),而不是单词(如，toomuch)。如果输入字母而不是数字，会导致程序出问题。这个问题要用if语句来解决(详见第7章)，因此请先输入数字。下面是程序的输出示例:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Are you worth your weight in platinum?</span><br><span class="line">Let's check it out.</span><br><span class="line">Please enter your weight in pounds:156</span><br><span class="line">Your weight in platinum is worth s3867491.25.</span><br><span class="line">You are easily worth that! If platinum prices drop</span><br><span class="line">eat more to maintain your value.</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note mdoern modern"><p>程序调整<br>即使用第2章介绍的方法，在程序中添加下面一行代码:<br><code>getchar();</code><br>程序的输出是否依旧在屏幕上一闪而过?本例，需要调用两次 getchar()函数:<br><code>getchar();</code><br><code>getchar();</code><br><code>getchar();</code>函数读取下一个输入字符，因此程序会等待用户输入。在这种情况下，键入156并按下Enter(或Return)键(发送一个换行符),然后<code>scanf()</code>读取键入的数字,第1个<code>getchar()</code>;读取换行符，第2个<code>getchar();</code>让程序暂停，等待输入。</p>
+</div>
+
+<h3 id="程序中的新元素"><a href="#程序中的新元素" class="headerlink" title="程序中的新元素"></a>程序中的新元素</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;程序清单3.1中包含C语言的一些新元素。</p>
+<ul>
+<li>注意，代码中使用了一种新的变量声明。前面的例子中只使用了整数类型的变量(int)，但是本例使用了浮点数类型(float)的变量，以便处理更大范围的数据。float类型可以储存带小数的数字。</li>
+<li>程序中演示了常量的几种新写法。现在可以使用带小数点的数了。</li>
+<li>为了打印新类型的变量，在<code>printf();</code>中使用%f来处理浮点值。号<code>%.2f</code>中的.2用于精确控制输出,指定输出的浮点数只显示小数点后面两位。</li>
+<li><code>scanf();</code>函数用于读取键盘的输入。$f说明<code>scanf();</code>要读取用户从键盘输入的浮点数，&amp;weight告诉scanf()把输入的值赋给名为weight的变量。scanf()函数使用&amp;符号表明找到 weight变量的地点。下一章将详细讨论&amp;。就目前而言，请按照这样写</li>
+<li>也许本程序最突出的新特点是它的交互性。计算机向用户询问信息，然后用户输入数字。与非交互式程序相比，交互式程序用起来更有趣。更重要的是，交互式使得程序更加灵活。例如，示例程序可以使用任何合理的体重，而不只是156磅。不必重写程序，就可以根据不同体重进行计算。scanf()和printf()函数用于实现这种交互。scanf()函数读取用户从键盘输入的数据，并把数据传递给程序;printf()函数读取程序中的数据，并把数据显示在屏幕上。把两个函数结合起来，就可以建立人机双向通信(见图3.1)，这让使用计算机更加饶有趣味。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2023-10-07-16-53-25.png" alt="."></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;本章着重解释上述新特性中的前两项:各种数据类型的变量和常量。第4章将介绍后3项。</p>
+<h2 id="变量与常量数据"><a href="#变量与常量数据" class="headerlink" title="变量与常量数据"></a>变量与常量数据</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;在程序的指导下，计算机可以做许多事情，如数值计算、名字排序、执行语言或视频命令、计算彗星轨道、准备邮件列表、拨电话号码、画画、做决策或其他你能想到的事情。要完成这些任务，程序需要使用数据，即承载信息的数字和字符。有些数据类型在程序使用之前已经预先设定好了，在整个程序的运行过程中没有变化，这些称为常量(constan)。其他数据类型在程序运行期间可能会改变或被赋值，这些称为变量(variable)。在示例程序中，weight是一个变量，14.5833是一个常量。那么，1700.0是常量还是变量?在现实生活中，白金的价格不会是常量，但是在程序中，像1700.0这样的价格被视为常量。</p>
+<h2 id="数据：数据类型关键字"><a href="#数据：数据类型关键字" class="headerlink" title="数据：数据类型关键字"></a>数据：数据类型关键字</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;不仅变量和常量不同，不同的数据类型之间也有差异。一些数据类型表示数字，·些数据类型表示字母(更普遍地说是字符)。C通过识别一些基本的数据类型来区分和使用这些不同的数据类型。如果数据是常量，编译器一般通过用户书写的形式来识别类型(如，42是整数，42.100是浮点数)。但是，对变量而言要在声明时指定其类型。稍后会详细介绍如何声明变量。现在，我们先来了解一下C语言的基本类型关键字。K&amp;C给出了7个与类型相关的关键字。C90标准添加了2个关键字，C99 标准又添加了3个关键字(见表 3.1)。</p>
+<p>表 3.1 C语言的数据类型关键字</p>
+<table>
+<thead>
+<tr>
+<th align="center">最初 K&amp;R 给出的关键字</th>
+<th align="center">C90标准添加的关键字</th>
+<th align="center">C99标准添加的关键字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">int</td>
+<td align="center">signed</td>
+<td align="center">_Bool</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">void</td>
+<td align="center">_Complex</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center"></td>
+<td align="center">_Imaginary</td>
+</tr>
+<tr>
+<td align="center">unsigned</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在C语言中，用int 关键字来表示基本的整数类型。后3个关键字(1ong、short 和unsigned)和C90新增的<code>signed</code>用于提供基本整数类型的变式，例如<code>unsigned short int</code>和<code>long long int</code>。<code>char</code>关键字用于指定字母和其他字符(如,#、$、和*)。另外，<code>char</code>类型也可以表示较小的整数。float、double 和 long double表示带小数点的数。 Bool类型表示布尔值(true或false)，complex 和Imaginary 分别表示复数和虚数。<br>&nbsp;&nbsp;&nbsp;&nbsp;通过这些关键字创建的类型，按计算机的储存方式可分为两大基本类型:整数类型和浮点数类型。</p>
+<div class="note primary mdoern modern"><p>位、字节和字<br>&nbsp;&nbsp;&nbsp;&nbsp;位、字节和字是描述计算机数据单元或存储单元的术语。这里主要指存储单元。最小的存储单元是位(bit )，可以储存0或|(或者说，位用于设置“开”或“关”)。虽然1位储存的信息有限，但是计算机中位的数量十分庞大。位是计算机内存的基本构建块。<br>&nbsp;&nbsp;&nbsp;&nbsp;字节(bvie)是常用的计算机存储单位。对于几乎所有的机器，1字节均为8位。这是字节的标准定义，至少在衡量存储单位时是这样(但是，℃语言对此有不同的定义，请参阅本章 3.4.3 节)。既然1位可以表示0或1，那么8位字节就有 256(2的8次方)种可能的0、1的组合。通过二进制编码(仅用0和】便可表示数字)，便可表示 0~255 的整数或一组字符(第 15 章将详细讨论二进制编码，如果感兴趣可以现在浏览一下该章的内容)。<br>&nbsp;&nbsp;&nbsp;&nbsp;字(word)是设计计算机时给定的自然存储单位。对于8位的微型计算机(如，最初的苹果机)，1个字长只有8位。从那以后，个人计算机字长增至 16位、32 位，直到目前的64位。计算机的字长越大，其数据转移越快，允许的内存访问也更多。</p>
+</div>
+
+<h3 id="整数和浮点数"><a href="#整数和浮点数" class="headerlink" title="整数和浮点数"></a>整数和浮点数</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;整数类型?浮点数类型?如果觉得这些术语非常陌生，别担心，下面先简述它们的含义。如果不熟悉位、字节和字的概念，请阅读上面方框中的内容。刚开始学习时，不必了解所有的细节，就像学习开车之前不必详细了解汽车内部引擎的原理一样。但是，了解一些计算机或汽车引擎内部的原理会对你有所帮助。对我们而言，整数和浮点数的区别是它们的书写方式不同。对计算机而言，它们的区别是储存方式不同。下面详细介绍整数和浮点数。</p>
+<h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;和数学的概念一样，在C语言中，整数是没有小数部分的数。例如,2、-23和 2456 都是整数。而 3.14、0.22和 2.000都不是整数。计算机以二进制数字储存整数，例如，整数7以二进制写是111。因此，要在8位字节中储存该数字，需要把前5位都设置成0，后3位设置成1(如图3.2所示)。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2023-07-02-23-00-42.png" alt="."></p>
+<h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;浮点数与数学中实数的概念差不多。2.75、3.16E7、7.00和2e-8都是浮点数。注意，在一个值后面加上一个小数点，该值就成为一个浮点值。所以，7是整数，7.00是浮点数。显然，书写浮点数有多种形式。稍后将详细介绍e记数法，这里先做简要介绍:3.16E7表示3.16X10(3.16乘以10的7次方)。其中，107=10000000，7被称为10的指数。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;这里关键要理解浮点数和整数的储存方案不同。计算机把浮点数分成小数部分和指数部分来表示，而且分开储存这两部分。因此，虽然7.00和7在数值上相同，但是它们的储存方式不同。在十进制下，可以把 7.0写成 0.7E1。这里，0.7是小数部分，1是指数部分。图3.3演示了一个储存浮点数的例子。当然，计算机在内部使用二进制和2的幂进行储存，而不是10的幂。第15章将详述相关内容。现在，我们着重讲解这两种类型的实际区别。</p>
+<ul>
+<li>整数没有小数部分，浮点数有小数部分。</li>
+<li>浮点数可以表示的范围比整数大。参见本章末的表3.3。</li>
+<li>对于一些算术运算(如，两个很大的数相减)，浮点数损失的精度更多。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2023-07-02-23-02-25.png" alt="."></p>
+<ul>
+<li>因为在任何区间内(如，10到2.0之间)都存在无穷多个实数，所以计算机的浮点数不能表示区间内所有的值。浮点数通常只是实际值的近似值。例如，7.0可能被储存为浮点值6.99999。稍后会</li>
+<li>讨论更多精度方面的内容。过去，浮点运算比整数运算慢。不过，现在许多CPU都包含浮点处理器，缩小了速度上的差距。</li>
+</ul>
+<h2 id="C语言基本数据类型"><a href="#C语言基本数据类型" class="headerlink" title="C语言基本数据类型"></a>C语言基本数据类型</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;本节将详细节介绍C语言的基本数据类型,包括如何声明变量、如何表示字面值常量(如,5或2.78),以及典型的用法。一些老式的C语言编译器无法支持这里提到的所有类型，请查阅你使用的编译器文档，了解可以使用哪些类型。</p>
+<h3 id="int-类型"><a href="#int-类型" class="headerlink" title="int 类型"></a>int 类型</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;C语言提供了许多整数类型，为什么一种类型不够用?因为C语言让程序员针对不同情况选择不同的类型。特别是，C语言中的整数类型可表示不同的取值范围和正负值。一般情况使用int类型即可，但是为满足特定任务和机器的要求，还可以选择其他类型。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;int 类型是有符号整型，即int类型的值必须是整数，可以是正整数、负整数或零。其取值范围依计算机系统而异。一般而言，储存一个int要占用一个机器字长。因此，早期的16位IBM PC兼容机使用16位来储存一个 int值，其取值范围(即int值的取值范围)是<code>-2768~32767</code>。目前的个人计算机一般是 32位，因此用32位储存一个int值。现在，个人计算机产业正逐步向着 64位处理器发展，自然能储存更大的整数。ISOC规定int的取值范围最小为<code>-32768~32767</code>。一般而言，系统用一个特殊位的值表示有符号整数的正负号。第15章将介绍常用的方法。</p>
+<ol>
+<li>声明 int 变量<br>&nbsp;&nbsp;&nbsp;&nbsp;第2章中已经用int声明过基本整型变量。先写上int，然后写变量名，最后加上一个分号。要声明<br>多个变量，可以单独声明每个变量，也可在int后面列出多个变量名，变量名之间用逗号分隔。下面都是<br>有效的声明:</li>
+</ol>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> erns;</span><br><span class="line"><span class="type">int</span> hogs,cows,goats;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;可以分别在4条声明中声明各变量，也可以在一条声明中声明4个变量。两种方法的效果相同，都为4<br>个int 大小的变量赋予名称并分配内存空间。<br>&nbsp;&nbsp;&nbsp;&nbsp;以上声明创建了变量，但是并没有给它们提供值。变量如何获得值?前面介绍过在程序中获取值的两<br>种途径。第1种途径是赋值:</p>
+<ol start="2">
+<li>初始化变量<br>&nbsp;&nbsp;&nbsp;&nbsp;初始化(iniialize)变量就是为变量赋一个初始值。在C语言中，初始化可以直接在声明中完成。只需在变量名后面加上赋值运算符(=)和待赋给变量的值即可。如下所示:</li>
+</ol>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> hoqs =<span class="number">21</span>;</span><br><span class="line"><span class="type">int</span> cows=<span class="number">32</span>，goats=<span class="number">14</span>;</span><br><span class="line"><span class="type">int</span> dogs, cats=<span class="number">94</span>;<span class="comment">/*有效，但是这种格式很糟糕 */</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;以上示例的最后一行，只初始化了cats，并未初始化dogs。这种写法很容易让人误认为 dogs 也被<br>初始化为94，所以最好不要把初始化的变量和未初始化的变量放在同一条声明中。<br>&nbsp;&nbsp;&nbsp;&nbsp;简而言之，声明为变量创建和标记存储空间，并为其指定初始值(如图3.4所示)。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/" alt="."></p>
+<ol start="3">
+<li><p>int 类型常量<br>&nbsp;&nbsp;&nbsp;&nbsp;上面示例中出现的整数(21、32、14和94)都是整型常量或整型字面量。C语言把不含小数点和指数的数作为整数。因此，22和-44都是整型常量，但是22.0和2.2E1则不是。C语言把大多数整型常量视为int类型，但是非常大的整数除外。详见后面“1ong 常量和 long long 常量”小节对 1ong int 类型的讨论。</p>
+</li>
+<li><p>打印 int 值</p>
+</li>
+</ol>
+</div></article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/avatar1.avif" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/avatar1.avif" title="头像" alt="头像"></a><div class="post-copyright__author_name">葱苓Ciraos</div><div class="post-copyright__author_desc">a small blog station</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.ciraos.top/p/ac068839/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://blog.ciraos.top/p/ac068839/')">CPrimerPlus-第三章-数据和C[持续更新中]</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/payment/wechat.avif" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/payment/wechat.avif" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/payment/alipay.avif" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/payment/alipay.avif" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.ciraos.top/p/ac068839/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=CPrimerPlus-第三章-数据和C[持续更新中]&amp;url=https://blog.ciraos.top/p/ac068839/&amp;pic=https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/genshin12.avif" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.ciraos.top" target="_blank">葱苓sama</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/CPrimerPlus/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>CPrimerPlus<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/ganyu3.avif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/764aa671/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/miku2.avif" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">给你的hexo博客配上swpp</div></div></a></div><div class="next-post pull-right"><a href="/p/bee08b52/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/ganyu3.avif" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Nextjs博客重构记录</div></div></a></div></nav><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)" style="display: none">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/avatar1.avif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"></div></div><div class="author-info__description">葱苓sama的小站</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">葱苓Ciraos</h1><div class="author-info__desc">a small blog station</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/ciraos" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://gitee.com/ciraos" target="_blank" title="Gitee"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=ciraos@yeah.net" target="_blank" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="social-icon faa-parent animated-hover" href="/rss.xml" target="_blank" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/142450786" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content"><div id="welcome-info"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">示例程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E6%96%B0%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.</span> <span class="toc-text">程序中的新元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">2.</span> <span class="toc-text">变量与常量数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">3.</span> <span class="toc-text">数据：数据类型关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E5%92%8C%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-number">3.1.</span> <span class="toc-text">整数和浮点数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0"><span class="toc-number">3.2.</span> <span class="toc-text">整数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-number">3.3.</span> <span class="toc-text">浮点数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">C语言基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#int-%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.1.</span> <span class="toc-text">int 类型</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/bee08b52/" title="Nextjs博客重构记录"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/ganyu3.avif" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif'" alt="Nextjs博客重构记录"></a><div class="content"><a class="title" href="/p/bee08b52/" title="Nextjs博客重构记录">Nextjs博客重构记录</a><time datetime="2024-09-13T01:15:24.000Z" title="发表于 2024-09-13 09:15:24">2024-09-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/ac068839/" title="CPrimerPlus-第三章-数据和C[持续更新中]"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/genshin12.avif" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif'" alt="CPrimerPlus-第三章-数据和C[持续更新中]"></a><div class="content"><a class="title" href="/p/ac068839/" title="CPrimerPlus-第三章-数据和C[持续更新中]">CPrimerPlus-第三章-数据和C[持续更新中]</a><time datetime="2024-06-09T05:20:42.000Z" title="发表于 2024-06-09 13:20:42">2024-06-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/764aa671/" title="给你的hexo博客配上swpp"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/miku2.avif" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif'" alt="给你的hexo博客配上swpp"></a><div class="content"><a class="title" href="/p/764aa671/" title="给你的hexo博客配上swpp">给你的hexo博客配上swpp</a><time datetime="2024-04-30T13:54:56.000Z" title="发表于 2024-04-30 21:54:56">2024-04-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/e3901a78/" title="给你的博客加上git提交日历"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/genshin1.avif" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif'" alt="给你的博客加上git提交日历"></a><div class="content"><a class="title" href="/p/e3901a78/" title="给你的博客加上git提交日历">给你的博客加上git提交日历</a><time datetime="2023-11-03T01:14:12.000Z" title="发表于 2023-11-03 09:14:12">2023-11-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/d4b6f22c/" title="hexo备份"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/erciyuan/genshin3.avif" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif'" alt="hexo备份"></a><div class="content"><a class="title" href="/p/d4b6f22c/" title="hexo备份">hexo备份</a><time datetime="2023-07-02T05:04:55.000Z" title="发表于 2023-07-02 13:04:55">2023-07-02</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://weibo.com/u/5324387584" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/142450786" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/i8d4d9Dw/" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/avatar1.avif" size="50px"><a class="deal_link" href="mailto:ciraos@yeah.net" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/ciraos" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://gitee.com/ciraos" title="Gitee"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="百度资源搜索平台" target="_blank" rel="noopener" href="https://ziyuan.baidu.com/">百度资源搜索平台</a><a class="footer-item" title="百度统计" target="_blank" rel="noopener" href="https://tongji.baidu.com/">百度统计</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="友人帐" href="/friends/">友人帐</a><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"></a><a class="github-badge" target="_blank" href="https://cloud.tencent.com" style="margin-inline:5px" data-title="本站由腾讯云lighthouse托管源码并部署" title="本站由腾讯云lighthouse托管源码并部署"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/badge/Source-tx.svg" alt="本站由腾讯云lighthouse托管源码并部署"></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20230619/" style="margin-inline:5px" data-title="萌ICP备20230619号" title="萌ICP备20230619号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://img.shields.io/badge/%E8%90%8CICP%E5%A4%87-20230619-fe1384?style-flat&amp;logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+nhxg7wAAByxJREFUSInl1nlwVeUZx/HPuTckkD0kQFiCEEIUlNUCAqKoSBV1AIt1ikpVLFbLONjWGUXbmWrbweJMy7hUxbbTjsUq6KCiWEvr0kE2WVK2QCKBJCxJgEASsienfxwqMob+3Zm+f93z3vM+32f5vc9z+H9bwVcfOp/YQ+1prhhEZS1VDQzqQ1MjiQmIC5Liwm3lBWpqFimrulb/7A/067vM2IsOBZ2h8MhJQW6KMDNVsKeaizKEyUlsKueqgWJ39AMJF3QpDCNYr1SaEig/lWNX2Z1h6dH5/lVyGdVIZFf7MHo9bEfh9rCg/+8NyHlN77QTsnpQ0i2y08VK+BosfhbW0cHxqmSfFd9qW+l9Pi+5WltFdGTsOBbO5dJcdh3lN5+xff0Y2zuelXjRsyYUrjOu4BVJaavlpbWIJRBLOM+J81O95AAnTtM9vNHGknut3zdT48FutJE3koWTuG4oSXH+VsInX3B9IdcVUNfCuv08t4GjO6NspOa3BNcOXx1eOugVHQnrTMkTuyWrC/BjRZO9uPYTpw7HhTWkXcLd45l9GblpHD7NWzt5ZTMXZ/OdkTy+lvR07rmcmWffq6pn9W5e/oymfcT6kJbXHiydMyVYkL/x66n+ZMcctQfjhgxl6UIGZ3Ooltd2RIZqjqKRS0ew9cFIA1cO5urlLHuPZWsZPJiZw7gqn0VT2HCIR9+jvCQhfHPrLGyE2Hng2roBxHnmJoZnc9drbD3I6QaaWkjpSVoeu4+x5XB05qMDqCenHz37UHmcFRv54ZuMeoYrB/L0DPRgZ0WfrsXVKzPX3nYykrn3dUZl8+Q0Qox/gc/L6ZlKzxQefo+UROpa6Z4VCedkPd8YyJYHI3u5T/HAShZNQxsXZfR3pCtwRW066VEeOuIUVUf77+9jTw2pycTOJml7Je1t9EgiI5X2jkgyze1fCSSdtjhBiJCkpKyuI+5oTdAtkTCgVwrbKsl8ko6QjO40tZ67EpkpdIbRf20dkbPpPTjdwsSX6I5dJYy4hoQAaZQdDy4A1iEMI613T6LtBPXJpPakrjGqc1Y6CTFq62htJp5KRwPJKWSkU3WKiiPEEqO6xgM6oZmctJhDXYH7Z59xuCyKpK6R26ZE+ys3MWYoN1/Mc5uoqmbEQJ6fTc/ulJ3i/lUc+YIfzeKhKzjVHN31A3XRHddKSrf6/6DOV3VTcw1hVKfkxOhaPDAe1UwfwmNTqT1Drxw+nE9xNXetIjHG2vnoxoT+rNrN2Of58Rp6JZ+ldKes5kjX4G7dKuikpoERfaltYnQ/DOSS3hEAFk9lXQkLnmf7Ib65lPJT3HU1+46Tm8rYvgzKYVA2h+vQIMjvewHwdSN20MiOSmZczO4a1hSzYi77T7CiiPF5JMTZexjJ5OagkwNV9M+MnJ09nKU3smgyQ3PYWoEO4fUjii4QceJmevJuMeP6csUAln4atcbSGoqOUpjD30uZNwnpHNtN3lC+NZa1xeT34pGVTJ3PL9+Ohs6GQ8gVtHZs6VLVwZhBReGwoXvt3THM/hP0SWVnCR8f4PMjkffjB/DQS8waxpHFfFgaaeHZDRRtJn0yP5tF31ymFVJ2nN27GD66KBzca2/XEWdkUpD3Fmd4tYj0FMS54Q9UnuaDUv6yE/24ewWP/DU6N/d1fvousYEs28DyLVEvGDOAt/egmSkXv2VYn3NBfpXbua6J8hMFFvy2RHsL+57gmX+w/AN651PfEDWQzLRI+afqIqOxFDJT6Rbn9Bmad3PnTH5wIxOXkJTWGiz57hCDsyqDWVldRNzeyOh+paaPfpFKnvqQX88iZwDVx0lLJqUHbe3EkZ1Odm+yUqK2GHYKmhvIG8fyeTz9IY5x67jnFPapdPDkl6jzwEF9IDjZJlgwfbG+o2u8+g4rd7D/UYI41TXnevV5K4j2q6uESckUP8rvNrH6fUH/sRXB9AlPONMSDZ8uazwoi56JjEyvdftV88jinhf4uIzmJRQOoOYgja0RKAiIBZxpjvZH5tP0c97axcLlyBXOuWZemJTYFFbUCU+1dl3j8PGSyFhnJ7EkYcWh7/njqpep5xfzWTyZZ7dEg73xOJKiGqf3YenNLBjLTz7i539COg/OvSOYO2GFo/VRG0Zwe0YX4Ns3R7NXSCxBeM8IthXfZvGf3xCWc/kkXvg2vVP4YB/rDzC1gGlDo+50/xvs2khKPrNnzAzmTH5HbzR0fkkKro93Ab5vx9kfaGgT3lLA5EyWbRpoTdHbSreOppGJV/PwlRTksK+aZz5l6z+RLBgxaau5k2cJelTKzmRQMq0d51J8UxL+23d1TDTcj7WQllZu4YwxDo+eZc22X9mwd6gN65GIFmQzampxcMOoR1xeuMbpVoqromsXdG3+wmCiekNtfSSmiUNWu2zgap+WjlZW8X11TeNkpWwICvNfCm8u3Cmxg4PN0VdmEJw7/7+0/g32RaqCbhRecAAAAABJRU5ErkJggg==" alt="萌ICP备20230619号"></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">©2023 - 2024 By <a class="footer-bar-link" href="/" title="葱苓Ciraos" target="_blank">葱苓Ciraos</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://image.anheyu.com" title="图床">图床</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="皖ICP备2023018992号-1">皖ICP备2023018992号-1</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">11</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">页面</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ciraos.top/" title="主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/svg/carrot.svg" alt="主页"><span class="back-menu-item-text">主页</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"><span class="back-menu-item-text">安知鱼图床</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://pan.ciraos.top/" title="葱苓の网盘"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/404.avif&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/svg/webdisk.svg" alt="葱苓の网盘"><span class="back-menu-item-text">葱苓の网盘</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/friends/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=969365979&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/cinemas/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 追剧页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 协议</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/copyright/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-banquan"></use></svg><span> 版权协议</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/privacy/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yinsixieyi"></use></svg><span> 隐私协议</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/cookies/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-huancun"></use></svg><span> Cookies</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/operation-model-and-responability/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yunyingguanli"></use></svg><span> 运营模式与责任</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CPrimerPlus/" style="font-size: 0.88rem;">CPrimerPlus<sup>1</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 0.88rem;">C语言<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>1</sup></a><a href="/tags/clientworker/" style="font-size: 0.88rem;">clientworker<sup>1</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>3</sup></a><a href="/tags/nextjs/" style="font-size: 0.88rem;">nextjs<sup>1</sup></a><a href="/tags/swpp/" style="font-size: 0.88rem;">swpp<sup>1</sup></a><a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 0.88rem;">随笔<sup>1</sup></a></div></div><hr></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="969365979" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("06/01/2023 14:30:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2023 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 葱苓Ciraos 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async="" src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.ciraos.top/',
+      region: 'ap-Shanghai',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.ciraos.top/',
+      region: 'ap-Shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo.ciraos.top/',
+        region: 'ap-Shanghai',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async="" data-pjax="" src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script async="" src="//at.alicdn.com/t/c/font_1979953_blssmwbxn24.js"></script><script defer="" type="text/javascript" src="/custom/custom.js?1"></script><script id="click-show-text" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="true" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="false" async="async"></script><script>(() => {
+  const isChatBtn = false
+  const isChatHideShow = false
+
+  if (isChatBtn) {
+    const close = () => {
+      Chatra('minimizeWidget')
+      Chatra('hide')
+    }
+
+    const open = () => {
+      Chatra('openChat', true)
+      Chatra('show')
+    }
+
+    window.ChatraSetup = {
+      startHidden: true
+    }
+  
+    window.chatBtnFn = () => {
+      const isShow = document.getElementById('chatra').classList.contains('chatra--expanded')
+      isShow ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        Chatra('hide')
+      },
+      show: () => {
+        Chatra('show')
+      }
+    }
+  }
+
+  (function(d, w, c) {
+    w.ChatraID = 'Cd6wGqd7AGSmgk5ce'
+    var s = d.createElement('script')
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments)
+    }
+    s.async = true
+    s.src = 'https://call.chatra.io/chatra.js'
+    if (d.head) d.head.appendChild(s)
+  })(document, window, 'Chatra')
+
+})()</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404')
+  }
+})</script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div>
+    <link rel="stylesheet" href="https://ai.tianli0.top/static/public/postChatUser_summary.min.css">
+    <script>
+        let tianliGPT_key = '4ce8b88ce3abefa48d48122284a6311e260b';
+        let tianliGPT_postSelector = '#postchat_postcontent';
+        let tianliGPT_Title = '文章摘要';
+        let tianliGPT_postURL = '/^https?://[^/]+/[0-9]{4}/[0-9]{2}/[0-9]{2}/';
+        let tianliGPT_blacklist = '';
+        let tianliGPT_wordLimit = '1000';
+        let tianliGPT_typingAnimate = true;
+        var postChatConfig = {
+          backgroundColor: "#39C5BB",
+          bottom: "16px",
+          left: "16px",
+          fill: "#FFFFFF",
+          width: "44px",
+          frameWidth: "375px",
+          frameHeight: "600px",
+          defaultInput: true,
+          upLoadWeb: true,
+          showInviteLink: true,
+          userTitle: "PostChat",
+          userDesc: "如果你对网站的内容有任何疑问，可以来问我哦～",
+          addButton: true,
+          beginningText: "这篇文章介绍了"
+        };
+    </script>
+    <script data-postchat_key="4ce8b88ce3abefa48d48122284a6311e260b" src="https://ai.tianli0.top/static/public/postChatUser_summary.min.js"></script>
+  </body></html>
